@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Endereço</title>
+    <style>
+        /* Estilos básicos para melhor visualização */
+        body { font-family: sans-serif; padding: 20px; }
+        form div { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"] { width: 300px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Endereço Inteligente</h1>
+    
+    <form id="formEndereco">
+        <div>
+            <label for="cep">CEP (Obrigatório, formato 00000-000)</label>
+            <input type="text" id="cep" name="cep" maxlength="9" required placeholder="Ex: 12345-678">
+        </div>
+        
+        <div>
+            <label for="logradouro">Logradouro (Obrigatório, min. 5 caracteres)</label>
+            <input type="text" id="logradouro" name="logradouro" required>
+        </div>
+        
+        <div>
+            <label for="numero">Número (Obrigatório, apenas dígitos)</label>
+            <input type="text" id="numero" name="numero" required>
+        </div>
+
+        <div>
+            <label for="uf">UF (Obrigatório, 2 letras maiúsculas)</label>
+            <input type="text" id="uf" name="uf" maxlength="2" required placeholder="Ex: SP">
+        </div>
+
+        <div>
+            <label for="complemento">Complemento (Opcional)</label>
+            <input type="text" id="complemento" name="complemento">
+        </div>
+        
+        <button type="submit">Cadastrar Endereço</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
